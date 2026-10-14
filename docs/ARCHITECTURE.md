@@ -83,3 +83,20 @@ Recomendação: começar com Electron para validar o fluxo WebRTC e compartilhar
 - RFC 8831, Data Channels: https://datatracker.ietf.org/doc/html/rfc8831
 - Visão geral ICE/STUN/TURN: https://developer.mozilla.org/docs/Web/API/WebRTC_API/Protocols
 - Licenças e links verificados: docs/LICENSES.md
+
+## Estrutura de pastas prevista
+
+- apps/desktop/src/main — ciclo de vida Electron, sessão, permissões e sinalização cliente.
+- apps/desktop/src/preload — API mínima tipada exposta por contextBridge.
+- apps/desktop/src/renderer — UI, pedido de conexão, consentimento e visualizador.
+- apps/desktop/tests — testes unitários de estado, IPC e fluxo de interface.
+- apps/signaling/src — servidor WSS, roteamento, expiração e rate limiting.
+- apps/signaling/tests — testes de protocolo e integração local.
+- apps/input-bridge — helper C# mínimo para SendInput e named pipe.
+- packages/protocol/src — schemas versionados de sinalização e eventos de controle.
+- tests/integration — duas instâncias locais e, depois, duas máquinas Windows.
+- infra/coturn — configuração de desenvolvimento e guia de deploy; sem credenciais commitadas.
+- docs — arquitetura, roadmap, licenças, teste e release.
+- .github/workflows — lint, teste, auditoria de dependências e build Windows.
+
+Nomes candidatos iniciais: apps/desktop/src/main/index.ts, apps/desktop/src/preload/index.ts, apps/desktop/src/renderer/App.tsx, apps/signaling/src/server.ts, apps/signaling/src/sessionStore.ts, apps/signaling/src/rateLimiter.ts, apps/input-bridge/MafraDesk.InputBridge.csproj e packages/protocol/src/messages.ts. Claude pode ajustar nomes se registrar a decisão e manter as fronteiras entre componentes.
