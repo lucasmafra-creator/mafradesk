@@ -1,7 +1,6 @@
 const byId = (id) => document.getElementById(id);
 const deviceId = byId('device-id');
 const codeValue = byId('temporary-code');
-const countdown = byId('countdown');
 const codeState = byId('code-state');
 const toast = byId('toast');
 
@@ -30,8 +29,6 @@ function renderCodeState() {
   const secondsLeft = Math.max(0, Math.ceil((currentInfo.expiresAt - Date.now()) / 1000));
   const minutes = String(Math.floor(secondsLeft / 60)).padStart(2, '0');
   const seconds = String(secondsLeft % 60).padStart(2, '0');
-  countdown.textContent = `${minutes}:${seconds}`;
-
   const expired = secondsLeft === 0;
   codeState.classList.toggle('expired', expired);
   codeState.innerHTML = expired
