@@ -26,4 +26,6 @@ A proposta é um ponto de partida, não uma declaração de que o MVP já está 
 
 ## Estado do repositório
 
-Especificação inicial publicada. O código do aplicativo ainda precisa ser implementado e validado em duas máquinas Windows.
+Protótipo local 0.1.0: janela desktop, ID numérico e código de 128 bits com expiração de dez minutos. A conexão remota ainda não está ativa e o código ainda não é consumido por uma sessão. A implementação seguirá os marcos do roadmap e precisa ser validada em duas máquinas Windows antes de qualquer release funcional.
+
+Para iniciar no Windows após clonar: npm install, npm start. Para os testes locais da identidade temporária: npm test. O primeiro npm install deve gerar e versionar o package-lock.json.
