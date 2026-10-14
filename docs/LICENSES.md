@@ -4,7 +4,7 @@ Este inventário cobre candidatos arquiteturais pesquisados em 14/10/2026. Não 
 
 | Componente candidato | Uso | Licença consultada | Decisão |
 |---|---|---|---|
-| Electron | Shell desktop, desktopCapturer e Chromium WebRTC | MIT no repositório Electron; builds também distribuem avisos de terceiros do Chromium | Recomendado; incluir/verificar avisos da versão empacotada. |
+| Electron | Shell desktop declarado em package.json como ^44.0.0; desktopCapturer e Chromium WebRTC | MIT no repositório Electron; builds também distribuem avisos de terceiros do Chromium | Dependência ativa declarada; package-lock.json e avisos da versão empacotada ainda pendentes. v44.7.1 era a versão estável observada em 14/10/2026. |
 | Node.js | Runtime do processo principal e servidor | MIT | Recomendado. |
 | TypeScript | Linguagem e compilador | Apache-2.0 | Recomendado. |
 | ws | WebSocket do serviço de sinalização | MIT | Candidato; revalidar versão e dependências. |
@@ -14,6 +14,11 @@ Este inventário cobre candidatos arquiteturais pesquisados em 14/10/2026. Não 
 | SIPSorcery | Alternativa C#/.NET para WebRTC | BSD-3-Clause com restrição adicional BDS BY-NC-SA declarada no upstream atual | Não selecionado por restrição incompatível com a política desejada. |
 | SIPSorceryMedia.FFmpeg | Codec/mídia opcional da alternativa acima | LGPL-2.1 no pacote citado | Não selecionado; LGPL exige análise de distribuição. |
 | PAKE/autenticação de fingerprint | Vincular código temporário à identidade WebRTC | Ainda sem biblioteca escolhida | Gate bloqueante; pesquisar implementação mantida/auditável e licença antes de codificar. |
+
+## Dependências efetivamente declaradas
+
+- electron: ^44.0.0 em package.json; licença MIT no projeto principal. O lockfile ainda não foi gerado, portanto a versão transitiva exata e os avisos Chromium do artefato precisam ser confirmados pelo Claude no Windows.
+- APIs node:crypto e node:test: módulos nativos do Node.js, sem pacote npm adicional.
 
 ## Regras
 
