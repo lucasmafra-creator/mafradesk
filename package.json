@@ -1,0 +1,15 @@
+{
+  "name": "mafradesk",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Aplicativo original de acesso remoto consentido para Windows.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test",
+    "check": "node --check src/main.js && node --check src/preload.js && node --check src/renderer/app.js"
+  },
+  "devDependencies": {
+    "electron": "^44.0.0"
+  }
+}
