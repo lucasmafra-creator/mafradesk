@@ -2,6 +2,13 @@
 
 Trabalhar em marcos pequenos. Um marco só fica concluído quando o critério de aceite foi executado e o resultado foi registrado. Não pular gates de segurança para chegar mais rápido à conexão remota.
 
+## Estado atual (14/10/2026)
+
+- Marco 0: parcial. Estrutura Electron inicial e scripts do npm publicados; instalação limpa/build do Electron ainda não executados e package-lock.json ainda precisa ser gerado no ambiente Windows.
+- Marco 1: parcial. UI local, ID de 12 dígitos e código aleatório de 128 bits com expiração de 10 minutos implementados; código não é consumido por uma sessão enquanto a rede não existir.
+- Verificações executadas neste ambiente: npm test (3/3 passando) e npm run check (sintaxe JavaScript aprovada).
+- Não verificado: abrir a janela Electron e instalar/empacotar no Windows. Não há conexão remota nesta versão.
+
 ## Marco 0 — Base do projeto e ambiente
 
 Arquivos candidatos: estrutura inicial, package.json, configuração TypeScript/Electron, README e CI de lint/teste/build.
