@@ -16,7 +16,8 @@ Leia README.md, docs/ARCHITECTURE.md, docs/ROADMAP.md, docs/LICENSES.md e SECURI
 
 ## Fluxo de trabalho e entrega
 
-- Trabalhe diretamente no repositório MafraDesk e mantenha o GitHub como fonte oficial do projeto.
+- O repositório GitHub lucasmafra-creator/mafradesk é a fonte canônica do código, das implementações, da documentação e dos builds. Não deixe implementação apenas em um ambiente separado nem substitua o código existente por outro scaffold.
+- Trabalhe diretamente no repositório MafraDesk e mantenha o GitHub como fonte oficial do projeto; Claude deve atualizar incrementalmente esse código e gerar os builds depois dos gates.
 - Avance pelos marcos em ordem sem parar para pedir aprovação a cada etapa; pare apenas quando houver uma decisão de segurança/licença sem solução, credencial externa ausente ou teste que realmente exija o Lucas.
 - Faça commits pequenos e claros após cada marco testado. Se tiver acesso de escrita ao GitHub, publique as mudanças na branch de trabalho e abra/atualize PR; não reescreva histórico nem force push.
 - Se não tiver acesso de escrita, entregue patch completo e passos objetivos para Lucas aplicar; nunca diga que atualizou o GitHub sem confirmar o commit.
@@ -25,4 +26,4 @@ Leia README.md, docs/ARCHITECTURE.md, docs/ROADMAP.md, docs/LICENSES.md e SECURI
 
 ## Primeira tarefa
 
-Comece pelo Marco 0 e siga para os marcos seguintes do docs/ROADMAP.md, na ordem, validando cada critério. Gere build de teste para Windows para os marcos que permitirem; só gere instalador de release após o Marco 7. Investigue uma implementação PAKE/protocolo revisado e sua licença antes de conectar usuários externos. Se esse gate não puder ser resolvido, continue as partes locais seguras e marque as partes de rede como bloqueadas, sem improvisar criptografia ou alegar que o MVP completo está pronto.
+Continue do protótipo local e execute Marco 0/1 por completo; em seguida siga para os marcos seguintes do docs/ROADMAP.md, na ordem, validando cada critério. Gere build de teste para Windows para os marcos que permitirem; só gere instalador de release após o Marco 7. Investigue uma implementação PAKE/protocolo revisado e sua licença antes de conectar usuários externos. Se esse gate não puder ser resolvido, continue as partes locais seguras e marque as partes de rede como bloqueadas, sem improvisar criptografia ou alegar que o MVP completo está pronto.
